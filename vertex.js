@@ -5,6 +5,7 @@ class Vertex {
     }
     show() {
         strokeWeight(10)
+        stroke('black')
         point(this.x,this.y);
     }
 }

@@ -59,7 +59,7 @@ class Hexagon {
             return false;
         this.edges[src][dest] = submitter;
         this.edges[dest][src] = submitter;
-        this.showEdge(src, dest, submitter == ai ? aiColor : playerColor)
+        //this.showEdge(src, dest, submitter == ai ? aiColor : playerColor)
         return true;
     }
     removeEdge(src, dest) {
