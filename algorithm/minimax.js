@@ -1,4 +1,6 @@
-function mousePressed() {
+let maxDepth = 8;
+
+function mouseClicked() {
     let vertex = hexagon.getVertex(mouseX, mouseY);
     if (vertex == -1 || turn == finished)
         return;
@@ -27,17 +29,24 @@ function playerTurn(vertex) {
 
 }
 
-
-function aiTurn() {
+function roundLessThanfour() {
     if (round <= 3) {
         let i = 0,
             j = int(random(1, 6))
         while (!hexagon.addEdge(i, j, ai)) j = int(random(1, 6));
-        hexagon.showEdge(i,j,aiColor);
+        hexagon.showEdge(i, j, aiColor);
         round++;
         turn = player;
+        return true;
+    } else if (round == 4) { // for safety considerations the depth is limited for mobile users
+        maxDepth = 10;
+    } else maxDepth = 15;
+    return false;
+}
+
+function aiTurn() {
+    if (roundLessThanfour())
         return;
-    }
     let bestScore = {
         val: -Infinity,
         depth: Infinity
@@ -75,6 +84,11 @@ function aiTurn() {
 function miniMax(depth, alpha, beta, isMaximizing) {
     let bestScore;
     if (isMaximizing) {
+        if (depth == maxDepth)
+            return {
+                val: Infinity,
+                depth
+            };
         bestScore = {
             val: -Infinity,
             depth: Infinity
@@ -96,6 +110,11 @@ function miniMax(depth, alpha, beta, isMaximizing) {
             }
         }
     } else {
+        if (depth == maxDepth)
+            return {
+                val: -Infinity,
+                depth
+            };
         bestScore = {
             val: Infinity,
             depth

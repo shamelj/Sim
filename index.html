@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
 
-    <title>Sketch</title>
+    <title>Sim Game</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -14,11 +15,12 @@
 
   <body>
     <script src="sketch.js"></script>
-    <script src="Hexagon.js"></script>
-    <script src="vertex.js"></script>
-    <script src="minimax.js"></script>
-
-    
+    <script src="classes/Hexagon.js"></script>
+    <script src="classes/vertex.js"></script>
+    <script src="algorithm/minimax.js"></script>
+    <div id="canvas"></div>
+    <div id="buttons"></div>
+    <p>How to play: Players alternately join dots on a hexagon; the first player who completes a triangle in their own color loses.</p>
 
   </body>
 </html>

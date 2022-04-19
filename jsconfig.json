@@ -3,5 +3,5 @@
     "*.js",
     "libraries/*.js",
     "c:\\Users\\c\\.vscode\\extensions\\samplavigne.p5-vscode-1.2.8\\p5types\\global.d.ts"
-  ]
+, "classes/Hexagon.js", "algorithm/minimax.js"  ]
 }

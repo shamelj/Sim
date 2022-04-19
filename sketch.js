@@ -8,13 +8,17 @@ let player = 1,
   round;
 
 function setup() {
-  let side = min(windowHeight, windowWidth) * 0.9
-  createCanvas(side, side);
+  let side = min(windowHeight, windowWidth) * 0.8
+  createCanvas(side, side).parent('canvas');
   reset(player);
-  let playerFirstBtn = createButton('Player start first');
+  let playerFirstBtn = createButton('Player start first').parent('buttons');
+  //playerFirstBtn.style('display: block;margin:10px auto')
   playerFirstBtn.mouseClicked(()=>reset(player));
-  let AiFirstBtn = createButton('Bot start first');
+  let AiFirstBtn = createButton('Bot start first').parent('buttons');
+  //AiFirstBtn.style('display: block;margin:10px auto')
   AiFirstBtn.mouseClicked(()=>{reset(ai)});
+ 
+
 }
 
 function reset(firstTurn) {

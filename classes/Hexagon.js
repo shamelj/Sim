@@ -50,7 +50,7 @@ class Hexagon {
     }
     getVertex(x, y) {
         for (let i = 0; i < this.vertices.length; i++)
-            if (dist(x, y, this.vertices[i].x, this.vertices[i].y) <= 10)
+            if (dist(x, y, this.vertices[i].x, this.vertices[i].y) <= width*0.03)
                 return i;
         return -1;
     }

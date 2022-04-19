@@ -1,8 +1,24 @@
-html, body {
+body {
+  color: #4169e1;
   margin: 0;
   padding: 0;
+  background-image: url('images/background.png');
+
 }
 
 canvas {
   display: block;
+  margin: 10px auto;
+}
+button{
+  display: block;
+  margin: 5px auto;
+  color: #4169e1;
+}
+#buttons{
+  width: ;
+  margin: 0px auto;
+}
+p{
+  text-align: center;
 }

@@ -4,8 +4,8 @@ class Vertex {
         this.y = y;
     }
     show() {
-        strokeWeight(10)
-        stroke('black')
+        strokeWeight(width*0.03)
+        stroke('#6820ab')
         point(this.x,this.y);
     }
 }
