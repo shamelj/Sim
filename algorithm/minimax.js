@@ -38,9 +38,9 @@ function roundLessThanfour() {
         round++;
         turn = player;
         return true;
-    } else if (round == 4) { // for safety considerations the depth is limited for mobile users
-        maxDepth = 10;
-    } else maxDepth = 15;
+    } else if (round > 4) { 
+        maxDepth = 15;
+    }
     return false;
 }
 

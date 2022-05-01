@@ -11,13 +11,15 @@ function setup() {
   let side = min(windowHeight, windowWidth) * 0.8
   createCanvas(side, side).parent('canvas');
   reset(player);
-  let playerFirstBtn = createButton('Player start first').parent('buttons');
-  //playerFirstBtn.style('display: block;margin:10px auto')
+  let playerFirstBtn = createButton('Player').parent('row1').class('col-3');
   playerFirstBtn.mouseClicked(()=>reset(player));
-  let AiFirstBtn = createButton('Bot start first').parent('buttons');
-  //AiFirstBtn.style('display: block;margin:10px auto')
+  let AiFirstBtn = createButton('Bot').parent('row1').class('col-3');
   AiFirstBtn.mouseClicked(()=>{reset(ai)});
- 
+  let difficultyRadio = createRadio().parent('row2');
+  difficultyRadio.option(15,'Hard');
+  difficultyRadio.option(8,'Medium');
+  difficultyRadio.selected('8')
+  difficultyRadio.mouseClicked(()=>maxDepth = int(difficultyRadio.value()))
 
 }
 

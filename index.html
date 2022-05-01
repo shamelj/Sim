@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/icon.png" type="image/x-icon">
 
-    <title>Sim Game</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/icon.png" type="image/x-icon">
+  <title>Sim Game</title>
+  <link rel="stylesheet" type="text/css" href="libraries/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+<body>
+  <script src="sketch.js"></script>
+  <script src="classes/Hexagon.js"></script>
+  <script src="classes/vertex.js"></script>
+  <script src="algorithm/minimax.js"></script>
+  <div id="canvas"></div>
+  <div id="buttons"></div>
+  <div class="container">
+    <P>Who starts first?</P>
+    <div id="row1" class="row justify-content-center mb-2">
+      
 
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
+    </div>
+    <div id="row2" class="row justify-content-center mb-2">
+      
 
-  <body>
-    <script src="sketch.js"></script>
-    <script src="classes/Hexagon.js"></script>
-    <script src="classes/vertex.js"></script>
-    <script src="algorithm/minimax.js"></script>
-    <div id="canvas"></div>
-    <div id="buttons"></div>
-    <p>How to play: Players alternately join dots on a hexagon; the first player who completes a triangle in their own color loses.</p>
+    </div>
+    
+  </div>
+  <p>How to play: Players alternately join dots on a hexagon; the first player who completes a triangle in their own
+    color loses.</p>
 
-  </body>
+</body>
+
 </html>
